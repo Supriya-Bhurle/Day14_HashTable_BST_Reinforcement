@@ -37,21 +37,49 @@ public class HashTableAssignment {
         tail = newNode;
     }
 
-    //Print HashTable.
+    //Printing the HashTable.
     public void printHashTable()
     {
         myMapNode current = head;
-        if (head == null) {
+        if (head == null)
+        {
             System.out.println("HashTable is empty");
-            return;
-        } else {
-            System.out.println("Occurrence of word in Sentence");
+        }
+        else
+        {
+            System.out.println("Occurrence of word in Paragraph");
             System.out.println("Key && Occurrence");
             System.out.println("-----------------");
-            while (current != null) {
+            while (current != null)
+            {
                 System.out.println(current.key + "    " + current.value);
                 current = current.next;
             }
+        }
+    }
+
+    //Delete Hash Table index containing a given key.
+    public void removeFromHashTable(String keyValue)
+    {
+        myMapNode current = head;
+        if (head == null)
+        {
+            System.out.println("HashTable is empty");
+        }
+        else
+        {
+            myMapNode previous = null;
+            while (current != null && !current.key.equalsIgnoreCase(keyValue))
+            {
+                //store the value of current in previous
+                previous = current;
+                current = current.next;
+            }
+            if (current == null)
+            {
+                throw new RuntimeException("The key with the given value is not found!!");
+            }
+            previous.next = current.next;
         }
     }
 
@@ -65,9 +93,16 @@ public class HashTableAssignment {
 
         //Create HashTable
         createHashTable(paragraph,hashTable);
+        System.out.println("\nPrinting the original Hash Table below.");
 
         //Printing the HashTable
-        System.out.println("\nPrinting the Hash Table");
+        hashTable.printHashTable();
+        System.out.println();
+
+        //Deleting from hashTable
+        hashTable.removeFromHashTable("avoidable");
+        System.out.println("Printing the Hash Table after removing the avoidable word from phrase");
+        System.out.println();
         hashTable.printHashTable();
     }
 
@@ -78,7 +113,8 @@ public class HashTableAssignment {
 
         int[] temp = new int[words.length];
         int visited = -1;
-        for (int i = 0; i < words.length; i++) {
+        for (int i = 0; i < words.length; i++)
+        {
             int occurrence = 1;
             for (int j = i + 1; j < words.length; j++)
             {
@@ -99,4 +135,5 @@ public class HashTableAssignment {
             }
         }
     }
+
 }
