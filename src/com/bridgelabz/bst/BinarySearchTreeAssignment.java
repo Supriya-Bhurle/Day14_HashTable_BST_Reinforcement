@@ -130,6 +130,7 @@ public class BinarySearchTreeAssignment<T extends Comparable<T>>{
 
     public static void main(String[] args) {
         BinarySearchTreeAssignment tree = new BinarySearchTreeAssignment();
+        System.out.println();
 
         //Adding values to BST
         for (int i = 0; i < tree.passValue.length; i++)
@@ -147,12 +148,9 @@ public class BinarySearchTreeAssignment<T extends Comparable<T>>{
         //Calculating the height of BST
         System.out.println("The height of the BST is : "+tree.calculateHeight(tree.root));
 
-        //Checking if all values are present in BST
-        boolean[] flag = new boolean[tree.passValue.length];
-        for (int i = 0; i < tree.passValue.length; i++)
-        {
-            flag[i] = tree.ifNodeExists(tree.root,tree.passValue[i]);
-            System.out.println(tree.passValue[i]+" is present |  "+flag[i]);
-        }
+        //Checking if 63 is present in BST
+        boolean flag = tree.ifNodeExists(tree.root,63);
+        System.out.println("The value 63 is present in the BST : "+flag);
     }
 }
+
