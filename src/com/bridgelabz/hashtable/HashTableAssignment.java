@@ -60,10 +60,11 @@ public class HashTableAssignment {
         HashTableAssignment hashTable = new HashTableAssignment();
 
         //Declaring the sentence
-        String sentence = "To be or not to be";
+        String paragraph = "Paranoids are not paranoid because they are paranoid \n" +
+                "but because they keep putting themselves deliberately into paranoid avoidable situations";
 
         //Create HashTable
-        createHashTable(sentence,hashTable);
+        createHashTable(paragraph,hashTable);
 
         //Printing the HashTable
         System.out.println("\nPrinting the Hash Table");
