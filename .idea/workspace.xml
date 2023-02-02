@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1907f16-8fef-4a1e-8962-c9c345872230" name="Changes" comment="" />
+    <list default="true" id="d1907f16-8fef-4a1e-8962-c9c345872230" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/bst/BinarySearchTreeAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/bst/BinarySearchTreeAssignment.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
