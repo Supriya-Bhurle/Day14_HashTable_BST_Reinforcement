@@ -120,7 +120,7 @@ public class HashTableAssignment {
             {
                 if (words[i].equals(words[j]))
                 {
-                    occurrence++;
+                   occurrence++;
                     temp[j] = visited;
                 }
             }
